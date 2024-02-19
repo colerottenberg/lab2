@@ -1,45 +1,46 @@
-# Compile of fib.vhd failed with 12 errors.
-# Compile of fib_tb.vhd failed with 1 errors.
-# 2 compiles, 2 failed with 13 errors.
+# Compile of add.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of datapath.vhd failed with 24 errors.
+# Compile of decode7seg.vhd was successful.
 # Compile of fib.vhd was successful.
 # Compile of fib_tb.vhd was successful.
-# 2 compiles, 0 failed with no errors.
-vsim -gui work.fib work.fib_tb
-# vsim -gui work.fib work.fib_tb 
-# Start time: 19:58:53 on Feb 18,2024
+# Compile of fsm.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of top_level.vhd was successful.
+# 10 compiles, 1 failed with 24 errors.
+# Compile of datapath.vhd failed with 1 errors.
+vsim -gui work.fsm
+# vsim -gui work.fsm 
+# Start time: 03:13:51 on Feb 19,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.fib(fib_arch)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fib_tb(tb)
-vsim -gui work.fib_tb
-# End time: 19:59:21 on Feb 18,2024, Elapsed time: 0:00:28
-# Errors: 0, Warnings: 6
-# vsim -gui work.fib_tb 
-# Start time: 19:59:21 on Feb 18,2024
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_std(body)
-# Loading work.fib_tb(tb)
-# Loading work.fib(fib_arch)
+# Loading work.fsm(id_s_5dcff587_1295f637_e)
 view -new wave
 # -new not supported on PE
 add wave -position insertpoint  \
-sim:/fib_tb/clk \
-sim:/fib_tb/done \
-sim:/fib_tb/go \
-sim:/fib_tb/n \
-sim:/fib_tb/output \
-sim:/fib_tb/reset \
-sim:/fib_tb/TEST_WIDTH
+sim:/fsm/id_S_2DdbF037_4E33d1ac_e \
+sim:/fsm/Id_S_3c0b9Eb_239711A1_E \
+sim:/fsm/iD_S_4BC1c7A7_6B4B6d0F_E \
+sim:/fsm/id_s_6D8C7f64_12D7C136_E \
+sim:/fsm/id_S_7c9B02c5_598FA886_e \
+sim:/fsm/ID_S_7c95Cc2B_1b9F1D82_E \
+sim:/fsm/ID_s_7C9844E0_38774De5_e \
+sim:/fsm/id_s_7cA07E8f_1cBd60fa_E \
+sim:/fsm/iD_S_7cA10aF0_3CF54137_E \
+sim:/fsm/ID_S_10B08b40_41C21917_E \
+sim:/fsm/id_s_10c2A3C1_4193da63_e \
+sim:/fsm/iD_s_34B84a16_43f520dd_E \
+sim:/fsm/iD_S_5977fb_7FFCC7f4_e \
+sim:/fsm/ID_s_b88A71e_7e341cF6_e \
+sim:/fsm/iD_S_B88665f_7E7082E6_E \
+sim:/fsm/Id_S_f66e137_35341610_e \
+sim:/fsm/Id_s_fA11bB1_487fE2B_e
 run -all
-# Break key hit
-# Simulation stop requested.
-# End time: 20:53:58 on Feb 18,2024, Elapsed time: 0:54:37
-# Errors: 0, Warnings: 1
+run -all
+run -all
+run -all
+run -all
+# End time: 03:16:38 on Feb 19,2024, Elapsed time: 0:02:47
+# Errors: 0, Warnings: 7

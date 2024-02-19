@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 
 entity mux is 
     generic(
-        width : integer := 8
+        width : integer := 6
     );
     port(
         input1 : in std_logic_vector(width-1 downto 0);
@@ -20,7 +20,7 @@ architecture rtl of mux is
 begin
     process(input1, input2, sel)
     begin
-        if sel = '1' then
+        if sel = '0' then
             output <= input1;
         else
             output <= input2;

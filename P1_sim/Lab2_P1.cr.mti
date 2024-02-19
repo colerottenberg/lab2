@@ -7,6 +7,54 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity fib
 -- Compiling architecture fib_arch of fib
 
+} {} {}} C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/add.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/add.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity add
+-- Compiling architecture arch of add
+
+} {} {}} C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity top_level
+-- Compiling architecture default of top_level
+-- Loading entity datapath
+-- Loading entity FSm
+-- Loading entity decode7seg
+
+} {} {}} C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity reg
+-- Compiling architecture rtl of reg
+
+} {} {}} C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package NUMERIC_STD
+-- Compiling entity mux
+-- Compiling architecture rtl of mux
+
+} {} {}} C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fsm.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fsm.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FSm
+-- Compiling architecture Id_S_5DcFF587_1295F637_E of FSm
+
 } {} {}} C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -18,5 +66,38 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity fib_tb
 -- Compiling architecture tb of fib_tb
 -- Loading entity fib
+
+} {} {}} C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decode7seg
+-- Compiling architecture rtl of decode7seg
+
+} {} {}} C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity datapath
+-- Compiling architecture rtl of datapath
+-- Loading package std_logic_arith
+-- Loading entity mux
+-- Loading entity reg
+** Error: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd(142): (vcom-1436) Actual expression (infix expression) of formal "d" is not globally static.
+-- Loading entity add
+-- Loading entity comparator
+** Note: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd(189): VHDL Compiler exiting
+
+} {12.0 13.0} {}} C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity comparator
+-- Compiling architecture behavioral of comparator
 
 } {} {}}

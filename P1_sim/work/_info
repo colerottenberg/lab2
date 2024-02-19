@@ -9,39 +9,39 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/coler/Documents/uf/spring24/dd/dd_lab1/P1_sim
-Efib
-Z0 w1708304299
+Eadd
+Z0 w1708326797
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 2
+!i122 4
 Z4 dC:/Users/coler/Documents/uf/spring24/dd/lab2/P1_sim
-Z5 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd
-Z6 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd
+Z5 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/add.vhd
+Z6 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/add.vhd
 l0
 L7 1
-VG1dIN;91XTJG;IXEoNYaM3
-!s100 H>j@^e=VzO=en0RIL]R<g1
+VBJ4PjfMdMEIfD:lecDG<L0
+!s100 R<ZNXAI_@6PSD>WP?W`3e3
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1708304317
+Z8 !s110 1708330216
 !i10b 1
-Z9 !s108 1708304317.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd|
-Z11 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd|
+Z9 !s108 1708330216.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/add.vhd|
+Z11 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/add.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
-Afib_arch
+Aarch
 R1
 R2
 R3
-Z14 DEx4 work 3 fib 0 22 G1dIN;91XTJG;IXEoNYaM3
-!i122 2
-l24
-L19 59
-VkPb?K?9Sb2C>YF]iC6NFG0
-!s100 `Ra4FBLVFOJQZ<3Nm3DLG2
+DEx4 work 3 add 0 22 BJ4PjfMdMEIfD:lecDG<L0
+!i122 4
+l18
+L17 4
+VRSn]]B4_WIHgU9le6lJ0;2
+!s100 UMLdPBGajVJhSHkUji:nI3
 R7
 32
 R8
@@ -52,17 +52,167 @@ R11
 !i113 1
 R12
 R13
-Efib_tb
-Z15 w1708303540
+Ecomparator
+Z14 w1708326240
 R1
-Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z17 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R2
 R3
-!i122 3
+!i122 5
 R4
-Z18 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd
-Z19 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd
+Z15 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd
+Z16 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd
+l0
+L6 1
+V6hS<fFM6YFUoKL:e1Ae`c2
+!s100 mnZ^j>5HSX0][nC5;V81`1
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd|
+Z18 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 10 comparator 0 22 6hS<fFM6YFUoKL:e1Ae`c2
+!i122 5
+l19
+L18 18
+Vm2O]IEP:cmI2MAmUfYdJ62
+!s100 M;56ZazoAQS:[IDXU0EC;3
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Edatapath
+w1708328955
+R1
+R2
+R3
+!i122 14
+R4
+8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd
+FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd
+l0
+L7 1
+VQZXYWgTJ_N]BCEjmXQ]D@3
+!s100 31]I0<<VSR]HgFXbmo7`[0
+R7
+32
+!s110 1708330397
+!i10b 1
+!s108 1708330397.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd|
+!s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd|
+!i113 1
+R12
+R13
+Edecode7seg
+Z19 w1708325471
+R2
+R3
+!i122 7
+R4
+Z20 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd
+Z21 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd
+l0
+L4 1
+Vn[3X<Pd4DUDP0HY_RhUzK3
+!s100 9DoEHo;[abhX44:78S]<93
+R7
+32
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd|
+Z23 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+Z24 DEx4 work 10 decode7seg 0 22 n[3X<Pd4DUDP0HY_RhUzK3
+!i122 7
+l12
+L11 20
+V>^k<g74C[@IkSC=jBNaKH2
+!s100 :f^[2?O1>7YeahQbMf1a_0
+R7
+32
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Efib
+Z25 w1708304299
+R1
+R2
+R3
+!i122 8
+R4
+Z26 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd
+Z27 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd
+l0
+L7 1
+VG1dIN;91XTJG;IXEoNYaM3
+!s100 H>j@^e=VzO=en0RIL]R<g1
+R7
+32
+R8
+!i10b 1
+R9
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd|
+Z29 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd|
+!i113 1
+R12
+R13
+Afib_arch
+R1
+R2
+R3
+Z30 DEx4 work 3 fib 0 22 G1dIN;91XTJG;IXEoNYaM3
+!i122 8
+l24
+L19 59
+VkPb?K?9Sb2C>YF]iC6NFG0
+!s100 `Ra4FBLVFOJQZ<3Nm3DLG2
+R7
+32
+R8
+!i10b 1
+R9
+R28
+R29
+!i113 1
+R12
+R13
+Efib_tb
+Z31 w1708303540
+R1
+Z32 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z33 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+!i122 9
+R4
+Z34 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd
+Z35 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd
 l0
 L9 1
 V2XelXYIPi9VAakGGHK>z=1
@@ -72,20 +222,20 @@ R7
 R8
 !i10b 1
 R9
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd|
-!s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd|
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd|
+Z37 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd|
 !i113 1
 R12
 R13
 Atb
-R14
+R30
 R1
-R16
-R17
+R32
+R33
 R2
 R3
 DEx4 work 6 fib_tb 0 22 2XelXYIPi9VAakGGHK>z=1
-!i122 3
+!i122 9
 l21
 L12 49
 VUEE>QU=f5VC8KIWi<gm?k0
@@ -95,8 +245,183 @@ R7
 R8
 !i10b 1
 R9
-R20
-Z21 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd|
+R36
+R37
+!i113 1
+R12
+R13
+Efsm
+Z38 w1708303229
+R2
+R3
+!i122 10
+R4
+Z39 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fsm.vhd
+Z40 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fsm.vhd
+l0
+L1 1
+V7l>o]>`9:kXbA8XCj`:0e2
+!s100 oSMdCPi4Eo<fAhIFlOY=21
+R7
+32
+R8
+!i10b 1
+R9
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fsm.vhd|
+Z42 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fsm.vhd|
+!i113 1
+R12
+R13
+Aid_s_5dcff587_1295f637_e
+R2
+R3
+Z43 DEx4 work 3 fsm 0 22 7l>o]>`9:kXbA8XCj`:0e2
+!i122 10
+l13
+L9 37
+V`R8VVoanNKd38V4]><_Zd3
+!s100 i;YDoeF9T7]l=WXmaf;XQ1
+R7
+32
+R8
+!i10b 1
+R9
+R41
+R42
+!i113 1
+R12
+R13
+Emux
+Z44 w1708326138
+R1
+R33
+R2
+R3
+!i122 11
+R4
+Z45 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd
+Z46 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd
+l0
+L6 1
+V`=m6S^EQgCe<@z`dzjZme2
+!s100 zkCCzQoUT5BLNQ@VJ1?Ob1
+R7
+32
+R8
+!i10b 1
+R9
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd|
+Z48 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R33
+R2
+R3
+DEx4 work 3 mux 0 22 `=m6S^EQgCe<@z`dzjZme2
+!i122 11
+l20
+L19 11
+VYhej_K;KVB@Tm2]>O]JKS1
+!s100 HieDRT3WCN3LiV57P6:]H3
+R7
+32
+R8
+!i10b 1
+R9
+R47
+R48
+!i113 1
+R12
+R13
+Ereg
+Z49 w1708324830
+R1
+R2
+R3
+!i122 12
+R4
+Z50 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/reg.vhd
+Z51 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/reg.vhd
+l0
+L5 1
+V:D62AO>iKSzgKWJl;iRe73
+!s100 [SemnS@FUQGhd<OSJGK;91
+R7
+32
+R8
+!i10b 1
+R9
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/reg.vhd|
+Z53 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/reg.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 3 reg 0 22 :D62AO>iKSzgKWJl;iRe73
+!i122 12
+l19
+L18 13
+VMzicXYDKEY3g:731]EYUN1
+!s100 ]eo]0bY5>6]6Z6A`Ze>8O0
+R7
+32
+R8
+!i10b 1
+R9
+R52
+R53
+!i113 1
+R12
+R13
+Etop_level
+Z54 w1708328667
+R1
+R2
+R3
+!i122 13
+R4
+Z55 8C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd
+Z56 FC:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd
+l0
+L5 1
+V88koBiF^aO=VYi4?2dG;N1
+!s100 X`REf2m`ICC3_a@eQ[o[g1
+R7
+32
+R8
+!i10b 1
+R9
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd|
+Z58 !s107 C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd|
+!i113 1
+R12
+R13
+Adefault
+R24
+R43
+DEx4 work 8 datapath 0 22 QZXYWgTJ_N]BCEjmXQ]D@3
+R1
+R2
+R3
+DEx4 work 9 top_level 0 22 88koBiF^aO=VYi4?2dG;N1
+!i122 13
+l45
+L25 107
+VN2A[J^[DkW_1ZFTGMWm1f3
+!s100 g3kUC4OM`>O38`AR`k0a22
+R7
+32
+R8
+!i10b 1
+R9
+R57
+R58
 !i113 1
 R12
 R13

@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 
 entity datapath is
     generic(
-      width : integer := 8
+      width : integer := 24
     );
     port(
       -- clk and rst
@@ -42,147 +42,148 @@ end datapath;
 -- afterwards, the register is connected to the fibonacci logic
 
 architecture rtl of datapath is
-    signal i_reg, x_reg, y_reg, n_reg : std_logic_vector(width-1 downto 0);
-    signal i_mux, x_mux, y_mux, result_mux : std_logic_vector(width-1 downto 0);
-    signal add1, add2 : std_logic_vector(width-1 downto 0);
+    signal i_reg_out, x_reg_out, y_reg_out, n_reg_out : std_logic_vector(width-1 downto 0);
+    signal i_mux_out, x_mux_out, y_mux_out, result_mux_out : std_logic_vector(width-1 downto 0);
+    signal add1_out, add2_out : std_logic_vector(width-1 downto 0);
+    signal n_scaled : std_logic_vector(width-1 downto 0);
   -- Build input register and logic 
     begin
   
   -- Connecting components to impl fibonacci logic using registers,mux, adders and comparators
         I_MUX : entity work.mux
             generic map(
-            width => width
+                width => width
             )
             port map(
-                input1 => add1,
+                input1 => add1_out,
                 input2 => std_logic_vector(to_unsigned(2, width)),
                 sel => i_sel,
-                output => i_mux
+                output => i_mux_out
             );
     
         X_MUX : entity work.mux
             generic map(
-            width => width
+                width => width
             )
             port map(
-                input1 => y_reg,
+                input1 => y_reg_out,
                 input2 => std_logic_vector(to_unsigned(0, width)),
                 sel => x_sel,
-                output => x_mux
+                output => x_mux_out
             );
 
         Y_MUX : entity work.mux
             generic map(
-            width => width
+                width => width
             )
             port map(
-                input1 => add2,
+                input1 => add2_out,
                 input2 => std_logic_vector(to_unsigned(1, width)),
                 sel => y_sel,
-                output => y_mux
+                output => y_mux_out
             );
 
         RESULT_MUX : entity work.mux
             generic map(
-            width => width
+                width => width
             )
             port map(
-                input1 => y_reg,
+                input1 => y_reg_out,
                 input2 => std_logic_vector(to_unsigned(0, width)),
                 sel => result_sel,
-                output => output
+                output => result
             );
 
         -- REGISTERS
 
         I_REG : entity work.reg
             generic map(
-            width => width
+                width => width
             )
             port map(
                 clk => clk,
                 reset => rst,
-                d => i_mux,
-                q => i_reg,
+                d => i_mux_out,
+                q => i_reg_out,
                 en => i_en
             );
 
         X_REG : entity work.reg
             generic map(
-            width => width
+                width => width
             )
             port map(
                 clk => clk,
                 reset => rst,
-                d => x_mux,
-                q => x_reg,
+                d => x_mux_out,
+                q => x_reg_out,
                 en => x_en
             );
 
         Y_REG : entity work.reg
             generic map(
-            width => width
+                width => width
             )
             port map(
                 clk => clk,
                 reset => rst,
-                d => y_mux,
-                q => y_reg,
+                d => y_mux_out,
+                q => y_reg_out,
                 en => y_en
             );
 
         N_REG : entity work.reg
             generic map(
-            width => 6
+                width => width
             )
             port map(
                 clk => clk,
                 reset => rst,
-                d => n,
-                q => n_reg,
+                d => (width-1-6 downto 0 => '0') & n,
+                q => n_reg_out,
                 en => n_en
             );
 
         -- ADDERS
 
-        ADD1 : entity work.adder
+        ADD1 : entity work.add
             generic map(
-            width => width
+                width => width
             )
             port map(
-                input1 => std_logic_vector(to_unsigned(1, width)),
-                input2 => i_reg,
-                output => add1
+                in1 => std_logic_vector(to_unsigned(1, width)),
+                in2 => i_reg_out,
+                output => add1_out
             );
 
-        ADD2 : entity work.adder
+        ADD2 : entity work.add
             generic map(
-            width => width
+                width => width
             )
             port map(
-                input1 => x_reg,
-                input2 => y_reg,
-                output => add2
+                in1 => x_reg_out,
+                in2 => y_reg_out,
+                output => add2_out
             );
 
         -- COMPARATOR
         N_COMP : entity work.comparator
             generic map(
-            width => 6
+                width => width
             )
             port map(
-                input1 => n_reg,
-                input2 => std_logic_vector(to_unsigned(0, 6)),
+                a => n_reg_out,
+                b => std_logic_vector(to_unsigned(0, width)),
                 eq => n_eq_0
             );
         
         LE_COMP : entity work.comparator
             generic map(
-            width => 6
+                width => width
             )
             port map(
-                input1 => i_reg,
-                input2 => n_reg,
+                a => i_reg_out,
+                b => n_reg_out,
                 le => i_le_n
             );
 end rtl;

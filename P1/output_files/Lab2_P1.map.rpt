@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Lab2_P1
-Mon Feb 19 01:52:50 2024
+Analysis & Synthesis report for Lab2_P1
+Mon Feb 19 03:47:01 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -7,10 +7,39 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top_level|FSm:FSM|id_S_2DdbF037_4E33d1ac_e
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: datapath:DATAPATH
+ 12. Parameter Settings for User Entity Instance: datapath:DATAPATH|mux:I_MUX
+ 13. Parameter Settings for User Entity Instance: datapath:DATAPATH|mux:X_MUX
+ 14. Parameter Settings for User Entity Instance: datapath:DATAPATH|mux:Y_MUX
+ 15. Parameter Settings for User Entity Instance: datapath:DATAPATH|mux:RESULT_MUX
+ 16. Parameter Settings for User Entity Instance: datapath:DATAPATH|reg:I_REG
+ 17. Parameter Settings for User Entity Instance: datapath:DATAPATH|reg:X_REG
+ 18. Parameter Settings for User Entity Instance: datapath:DATAPATH|reg:Y_REG
+ 19. Parameter Settings for User Entity Instance: datapath:DATAPATH|reg:N_REG
+ 20. Parameter Settings for User Entity Instance: datapath:DATAPATH|add:ADD1
+ 21. Parameter Settings for User Entity Instance: datapath:DATAPATH|add:ADD2
+ 22. Parameter Settings for User Entity Instance: datapath:DATAPATH|comparator:N_COMP
+ 23. Parameter Settings for User Entity Instance: datapath:DATAPATH|comparator:LE_COMP
+ 24. Port Connectivity Checks: "datapath:DATAPATH|comparator:LE_COMP"
+ 25. Port Connectivity Checks: "datapath:DATAPATH|comparator:N_COMP"
+ 26. Port Connectivity Checks: "datapath:DATAPATH|add:ADD1"
+ 27. Port Connectivity Checks: "datapath:DATAPATH|reg:N_REG"
+ 28. Port Connectivity Checks: "datapath:DATAPATH|mux:RESULT_MUX"
+ 29. Port Connectivity Checks: "datapath:DATAPATH|mux:Y_MUX"
+ 30. Port Connectivity Checks: "datapath:DATAPATH|mux:X_MUX"
+ 31. Port Connectivity Checks: "datapath:DATAPATH|mux:I_MUX"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
 
 
 
@@ -35,45 +64,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 +-------------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                      ;
+; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Mon Feb 19 01:52:50 2024              ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 19 03:47:01 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; Lab2_P1                                        ;
 ; Top-level Entity Name              ; top_level                                      ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; N/A until Partition Merge                      ;
-;     Total combinational functions  ; N/A until Partition Merge                      ;
-;     Dedicated logic registers      ; N/A until Partition Merge                      ;
-; Total registers                    ; N/A until Partition Merge                      ;
-; Total pins                         ; N/A until Partition Merge                      ;
-; Total virtual pins                 ; N/A until Partition Merge                      ;
-; Total memory bits                  ; N/A until Partition Merge                      ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
-; Total PLLs                         ; N/A until Partition Merge                      ;
-; UFM blocks                         ; N/A until Partition Merge                      ;
-; ADC blocks                         ; N/A until Partition Merge                      ;
+; Total logic elements               ; 192                                            ;
+;     Total combinational functions  ; 185                                            ;
+;     Dedicated logic registers      ; 87                                             ;
+; Total registers                    ; 87                                             ;
+; Total pins                         ; 61                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -158,14 +171,389 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; fsm.vhd                          ; yes             ; User VHDL File  ; C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fsm.vhd        ;         ;
+; reg.vhd                          ; yes             ; User VHDL File  ; C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/reg.vhd        ;         ;
+; top_level.vhd                    ; yes             ; User VHDL File  ; C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd  ;         ;
+; decode7seg.vhd                   ; yes             ; User VHDL File  ; C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File  ; C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd   ;         ;
+; mux.vhd                          ; yes             ; User VHDL File  ; C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd        ;         ;
+; add.vhd                          ; yes             ; User VHDL File  ; C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/add.vhd        ;         ;
+; comparator.vhd                   ; yes             ; User VHDL File  ; C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 192       ;
+;                                             ;           ;
+; Total combinational functions               ; 185       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 55        ;
+;     -- 3 input functions                    ; 75        ;
+;     -- <=2 input functions                  ; 55        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 134       ;
+;     -- arithmetic mode                      ; 51        ;
+;                                             ;           ;
+; Total registers                             ; 87        ;
+;     -- Dedicated logic registers            ; 87        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 61        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 87        ;
+; Total fan-out                               ; 1094      ;
+; Average fan-out                             ; 2.78      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                            ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                             ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+-------------+--------------+
+; |top_level                 ; 185 (1)             ; 87 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 61   ; 0            ; 0          ; |top_level                                      ; top_level   ; work         ;
+;    |FSm:FSM|               ; 13 (13)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|FSm:FSM                              ; FSm         ; work         ;
+;    |datapath:DATAPATH|     ; 87 (0)              ; 78 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:DATAPATH                    ; datapath    ; work         ;
+;       |comparator:LE_COMP| ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:DATAPATH|comparator:LE_COMP ; comparator  ; work         ;
+;       |comparator:N_COMP|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:DATAPATH|comparator:N_COMP  ; comparator  ; work         ;
+;       |mux:X_MUX|          ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:DATAPATH|mux:X_MUX          ; mux         ; work         ;
+;       |reg:I_REG|          ; 24 (24)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:DATAPATH|reg:I_REG          ; reg         ; work         ;
+;       |reg:N_REG|          ; 0 (0)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:DATAPATH|reg:N_REG          ; reg         ; work         ;
+;       |reg:X_REG|          ; 0 (0)               ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:DATAPATH|reg:X_REG          ; reg         ; work         ;
+;       |reg:Y_REG|          ; 24 (24)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|datapath:DATAPATH|reg:Y_REG          ; reg         ; work         ;
+;    |decode7seg:U_LED0|     ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decode7seg:U_LED0                    ; decode7seg  ; work         ;
+;    |decode7seg:U_LED1|     ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decode7seg:U_LED1                    ; decode7seg  ; work         ;
+;    |decode7seg:U_LED2|     ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decode7seg:U_LED2                    ; decode7seg  ; work         ;
+;    |decode7seg:U_LED3|     ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decode7seg:U_LED3                    ; decode7seg  ; work         ;
+;    |decode7seg:U_LED4|     ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decode7seg:U_LED4                    ; decode7seg  ; work         ;
+;    |decode7seg:U_LED5|     ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decode7seg:U_LED5                    ; decode7seg  ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|FSm:FSM|id_S_2DdbF037_4E33d1ac_e                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+
+; Name                                              ; id_S_2DdbF037_4E33d1ac_e.iD_s_3F29fc8a_7f27E122_E ; id_S_2DdbF037_4E33d1ac_e.iD_S_4012ef9E_5284e514_e ; id_S_2DdbF037_4E33d1ac_e.id_S_19F178e7_266D8Fb4_e ; id_S_2DdbF037_4E33d1ac_e.iD_s_19ebFBbB_3A6d6166_E ; id_S_2DdbF037_4E33d1ac_e.iD_s_38D55F9e_45375DC3_E ; id_S_2DdbF037_4E33d1ac_e.iD_S_38d55f9d_45375dC2_E ; id_S_2DdbF037_4E33d1ac_e.Id_s_73D8EAE2_7D643Ef5_e ; id_S_2DdbF037_4E33d1ac_e.Id_S_7c988539_38B28d81_E ; id_S_2DdbF037_4E33d1ac_e.id_S_106149D3_35F88610_e ;
++---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+
+; id_S_2DdbF037_4E33d1ac_e.id_S_106149D3_35F88610_e ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ;
+; id_S_2DdbF037_4E33d1ac_e.Id_S_7c988539_38B28d81_E ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 1                                                 ; 1                                                 ;
+; id_S_2DdbF037_4E33d1ac_e.Id_s_73D8EAE2_7D643Ef5_e ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 1                                                 ; 0                                                 ; 1                                                 ;
+; id_S_2DdbF037_4E33d1ac_e.iD_S_38d55f9d_45375dC2_E ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 1                                                 ; 0                                                 ; 0                                                 ; 1                                                 ;
+; id_S_2DdbF037_4E33d1ac_e.iD_s_38D55F9e_45375DC3_E ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 1                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 1                                                 ;
+; id_S_2DdbF037_4E33d1ac_e.iD_s_19ebFBbB_3A6d6166_E ; 0                                                 ; 0                                                 ; 0                                                 ; 1                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 1                                                 ;
+; id_S_2DdbF037_4E33d1ac_e.id_S_19F178e7_266D8Fb4_e ; 0                                                 ; 0                                                 ; 1                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 1                                                 ;
+; id_S_2DdbF037_4E33d1ac_e.iD_S_4012ef9E_5284e514_e ; 0                                                 ; 1                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 1                                                 ;
+; id_S_2DdbF037_4E33d1ac_e.iD_s_3F29fc8a_7f27E122_E ; 1                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 0                                                 ; 1                                                 ;
++---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; datapath:DATAPATH|reg:N_REG|q[6..23]   ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 18 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 87    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 48    ;
+; Number of registers using Asynchronous Clear ; 87    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 78    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; width          ; 24    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|mux:I_MUX ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; width          ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|mux:X_MUX ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; width          ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|mux:Y_MUX ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; width          ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|mux:RESULT_MUX ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; width          ; 24    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|reg:I_REG ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; width          ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|reg:X_REG ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; width          ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|reg:Y_REG ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; width          ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|reg:N_REG ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; width          ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|add:ADD1 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; width          ; 24    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|add:ADD2 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; width          ; 24    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|comparator:N_COMP ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; width          ; 24    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DATAPATH|comparator:LE_COMP ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; width          ; 24    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:DATAPATH|comparator:LE_COMP"                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; eq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:DATAPATH|comparator:N_COMP"                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; b    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; le   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "datapath:DATAPATH|add:ADD1" ;
++------------+-------+----------+------------------------+
+; Port       ; Type  ; Severity ; Details                ;
++------------+-------+----------+------------------------+
+; in1[23..1] ; Input ; Info     ; Stuck at GND           ;
+; in1[0]     ; Input ; Info     ; Stuck at VCC           ;
++------------+-------+----------+------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "datapath:DATAPATH|reg:N_REG" ;
++----------+-------+----------+---------------------------+
+; Port     ; Type  ; Severity ; Details                   ;
++----------+-------+----------+---------------------------+
+; d[23..6] ; Input ; Info     ; Stuck at GND              ;
++----------+-------+----------+---------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:DATAPATH|mux:RESULT_MUX" ;
++--------+-------+----------+----------------------------------+
+; Port   ; Type  ; Severity ; Details                          ;
++--------+-------+----------+----------------------------------+
+; input2 ; Input ; Info     ; Stuck at GND                     ;
++--------+-------+----------+----------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "datapath:DATAPATH|mux:Y_MUX" ;
++---------------+-------+----------+----------------------+
+; Port          ; Type  ; Severity ; Details              ;
++---------------+-------+----------+----------------------+
+; input2[23..1] ; Input ; Info     ; Stuck at GND         ;
+; input2[0]     ; Input ; Info     ; Stuck at VCC         ;
++---------------+-------+----------+----------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "datapath:DATAPATH|mux:X_MUX" ;
++--------+-------+----------+-----------------------------+
+; Port   ; Type  ; Severity ; Details                     ;
++--------+-------+----------+-----------------------------+
+; input2 ; Input ; Info     ; Stuck at GND                ;
++--------+-------+----------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "datapath:DATAPATH|mux:I_MUX" ;
++---------------+-------+----------+----------------------+
+; Port          ; Type  ; Severity ; Details              ;
++---------------+-------+----------+----------------------+
+; input2[23..2] ; Input ; Info     ; Stuck at GND         ;
+; input2[1]     ; Input ; Info     ; Stuck at VCC         ;
+; input2[0]     ; Input ; Info     ; Stuck at GND         ;
++---------------+-------+----------+----------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 61                          ;
+; cycloneiii_ff         ; 87                          ;
+;     CLR               ; 9                           ;
+;     ENA CLR           ; 30                          ;
+;     ENA CLR SLD       ; 48                          ;
+; cycloneiii_lcell_comb ; 186                         ;
+;     arith             ; 51                          ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 28                          ;
+;     normal            ; 135                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 47                          ;
+;         4 data inputs ; 55                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 2.24                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Feb 19 01:52:46 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2_P1 -c Lab2_P1 --analysis_and_elaboration
+    Info: Processing started: Mon Feb 19 03:46:56 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2_P1 -c Lab2_P1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
@@ -199,21 +587,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file add.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
     Info (12022): Found design unit 1: comparator-behavioral File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd Line: 18
     Info (12023): Found entity 1: comparator File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd Line: 6
-Error (10465): VHDL error at datapath.vhd(52): name "i_mux" cannot be used because it is already used for a previously declared item File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 52
-Error (10349): VHDL Association List error at datapath.vhd(54): formal "width" does not exist File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 54
-Error (10349): VHDL Association List error at datapath.vhd(57): formal "input1" does not exist File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 57
-Error (10346): VHDL error at datapath.vhd(52): formal port or parameter "input1" must have actual or default value File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 52
-Error (10784): HDL error at mux.vhd(11): see declaration for object "input1" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 11
-Error (10346): VHDL error at datapath.vhd(52): formal port or parameter "input2" must have actual or default value File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 52
-Error (10784): HDL error at mux.vhd(12): see declaration for object "input2" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 12
-Error (10346): VHDL error at datapath.vhd(52): formal port or parameter "sel" must have actual or default value File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 52
-Error (10784): HDL error at mux.vhd(13): see declaration for object "sel" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 13
-Error (10346): VHDL error at datapath.vhd(52): formal port or parameter "output" must have actual or default value File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 52
-Error (10784): HDL error at mux.vhd(14): see declaration for object "output" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 14
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 11 errors, 2 warnings
-    Error: Peak virtual memory: 4798 megabytes
-    Error: Processing ended: Mon Feb 19 01:52:50 2024
-    Error: Elapsed time: 00:00:04
-    Error: Total CPU time (on all processors): 00:00:04
+Info (12127): Elaborating entity "top_level" for the top level hierarchy
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:DATAPATH" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd Line: 50
+Info (12128): Elaborating entity "mux" for hierarchy "datapath:DATAPATH|mux:I_MUX" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 53
+Info (12128): Elaborating entity "reg" for hierarchy "datapath:DATAPATH|reg:I_REG" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 99
+Info (12128): Elaborating entity "add" for hierarchy "datapath:DATAPATH|add:ADD1" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 149
+Info (12128): Elaborating entity "comparator" for hierarchy "datapath:DATAPATH|comparator:N_COMP" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 170
+Info (12128): Elaborating entity "FSm" for hierarchy "FSm:FSM" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd Line: 69
+Info (12128): Elaborating entity "decode7seg" for hierarchy "decode7seg:U_LED5" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd Line: 88
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "switch[6]" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd Line: 8
+    Warning (15610): No output dependent on input pin "switch[7]" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd Line: 8
+    Warning (15610): No output dependent on input pin "switch[8]" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd Line: 8
+    Warning (15610): No output dependent on input pin "switch[9]" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd Line: 8
+Info (21057): Implemented 253 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 48 output pins
+    Info (21061): Implemented 192 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4890 megabytes
+    Info: Processing ended: Mon Feb 19 03:47:01 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 
