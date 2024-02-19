@@ -1,6 +1,6 @@
 Analysis & Elaboration report for Lab2_P1
-Wed Feb 14 16:24:35 2024
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Sun Feb 18 19:58:28 2024
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
@@ -9,15 +9,16 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |fib
+  5. Analysis & Elaboration Settings
+  6. Analysis & Elaboration Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,10 +38,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                      ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Wed Feb 14 16:24:35 2024              ;
-; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Analysis & Elaboration Status      ; Successful - Sun Feb 18 19:58:28 2024          ;
+; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; Lab2_P1                                        ;
-; Top-level Entity Name              ; decode7seg                                     ;
+; Top-level Entity Name              ; fib                                            ;
 ; Family                             ; MAX 10                                         ;
 ; Total logic elements               ; N/A until Partition Merge                      ;
 ;     Total combinational functions  ; N/A until Partition Merge                      ;
@@ -72,13 +73,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |fib ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; width          ; 8     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; decode7seg         ; Lab2_P1            ;
+; Top-level entity name                                            ; fib                ; Lab2_P1            ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -163,27 +174,27 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Feb 14 16:24:32 2024
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Sun Feb 18 19:58:24 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2_P1 -c Lab2_P1 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file decode7seg.vhd
-    Info (12022): Found design unit 1: decode7seg-rtl File: /home/crott/Documents/spring24/dd/lab2/P1/decode7seg.vhd Line: 11
-    Info (12023): Found entity 1: decode7seg File: /home/crott/Documents/spring24/dd/lab2/P1/decode7seg.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
-    Info (12022): Found design unit 1: FSm-Id_S_5DcFF587_1295F637_E File: /home/crott/Documents/spring24/dd/lab2/P1/fsm.vhd Line: 9
-    Info (12023): Found entity 1: FSm File: /home/crott/Documents/spring24/dd/lab2/P1/fsm.vhd Line: 1
-Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
-    Info (12022): Found design unit 1: top_level-default File: /home/crott/Documents/spring24/dd/lab2/P1/top_level.vhd Line: 25
-    Info (12023): Found entity 1: top_level File: /home/crott/Documents/spring24/dd/lab2/P1/top_level.vhd Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file DE10_LITE_Golden_Top.v
-    Info (12023): Found entity 1: DE10_LITE_Golden_Top File: /home/crott/Documents/spring24/dd/lab2/P1/DE10_LITE_Golden_Top.v Line: 29
-Error (10481): VHDL Use Clause error at top_level.vhd(50): design library "work" does not contain primary unit "datapath". Verify that the primary unit exists in the library and has been successfully compiled. File: /home/crott/Documents/spring24/dd/lab2/P1/top_level.vhd Line: 50
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 730 megabytes
-    Error: Processing ended: Wed Feb 14 16:24:35 2024
-    Error: Elapsed time: 00:00:03
-    Error: Total CPU time (on all processors): 00:00:10
+    Info (12022): Found design unit 1: decode7seg-rtl File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd Line: 11
+    Info (12023): Found entity 1: decode7seg File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file fib.vhd
+    Info (12022): Found design unit 1: fib-fib_arch File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd Line: 19
+    Info (12023): Found entity 1: fib File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.vhd
+    Info (12023): Found entity 1: datapath File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file fib_tb.vhd
+    Info (12022): Found design unit 1: fib_tb-tb File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd Line: 12
+    Info (12023): Found entity 1: fib_tb File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd Line: 9
+Info (12127): Elaborating entity "fib" for the top level hierarchy
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4804 megabytes
+    Info: Processing ended: Sun Feb 18 19:58:28 2024
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 

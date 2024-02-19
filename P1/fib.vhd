@@ -1,6 +1,5 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_arith.all;
 use ieee.numeric_std.all;
 
 -- Building a fibonacci sequence generator
@@ -19,14 +18,14 @@ end entity;
 
 architecture fib_arch of fib is
     type state_type is (S_WAIT, S_INIT, S_LOOP_COND, S_ELSE, S_DONE);
-	signal state:	state_type;
-	signal regN, i, x, y	: std_logic_vector(width -1 downto 0);
+		signal state:	state_type;
+		signal regN, i, x, y	: std_logic_vector(width-1 downto 0);
 	
 begin
-	process (clk, resest)
-	variable temp:	unsigned (width-1 downto 0);
+	process (clk, reset)
+	variable temp:	unsigned(width-1 downto 0);
 	begin
-		if(rst ='1') then
+		if(reset ='1') then
 			done <= '0';
 			output <= (others => '0');
 			regN <= std_logic_vector(to_unsigned(0, WIDTH));

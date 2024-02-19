@@ -25,3 +25,40 @@ entity datapath is
 end datapath;
 
 -- The datapath is composed of registers, fibonacci logic and other components
+
+-- The datapath starts with a register for the input n
+-- if n_en is high, the input n is loaded into the register
+-- afterwards, the register is connected to the fibonacci logic
+
+architecture rtl of datapath is
+  signal n_reg : std_logic_vector(5 downto 0);
+  signal x_reg : std_logic_vector(23 downto 0);
+  signal y_reg : std_logic_vector(23 downto 0);
+  signal i_reg : std_logic_vector(5 downto 0);
+  signal n_eq_0_reg : std_logic;
+  signal i_le_n_reg : std_logic;
+  
+  -- Build input register and logic 
+  n_reg : entity work.register
+    generic map(
+      width => 6
+    )
+    port map(
+      clk => clk,
+      rst => rst,
+      d => n,
+      en => n_en,
+      q => n_reg
+    );
+
+  fibonacci : entity work.fib
+    port map(
+      clk => clk,
+      rst => rst,
+      n => n_reg,
+      x => x_reg,
+      y => y_reg,
+      i => i_reg,
+      n_eq_0 => n_eq_0_reg,
+      i_le_n => i_le_n_reg
+    );

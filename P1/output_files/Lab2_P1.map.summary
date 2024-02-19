@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Failed - Wed Feb 14 16:24:35 2024
-Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Analysis & Elaboration Status : Successful - Sun Feb 18 19:58:28 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : Lab2_P1
-Top-level Entity Name : decode7seg
+Top-level Entity Name : fib
 Family : MAX 10
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

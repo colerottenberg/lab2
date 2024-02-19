@@ -51,4 +51,10 @@ begin
       wait until done = '1';
       assert output = std_logic_vector(to_unsigned(89, TEST_WIDTH)) report "Test 1 failed" severity error;
 
-end tb ; -- tb
+      -- Finish the test
+
+      wait;
+
+    end process;
+
+end tb; -- tb
