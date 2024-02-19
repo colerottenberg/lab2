@@ -95,6 +95,9 @@ The implementation of the design can be found in the Appendix under Listing \ref
 % - Special cases?
 % Include if possible, timing diagram of photo/video of the system.
 Testing the design was relatively straightforward. After working past syntax errors, the design was able to compile and after assigning the correct outputs to LEDs, the code worked immeadiately. The design was also tested in ModelSim with 11 as the input, and the output was 89, which is the correct output for the 11th number in the fibonacci sequence. In figure \ref{fig:model-sim}, the ModelSim simulation of the datapath can be seen. The simulation shows the correct output for the 11th number in the fibonacci sequence. The design was also tested on the FPGA board, and the output was 89, which is the correct output for the 11th number in the fibonacci sequence. The FPGA board with the working datapath can be seen in figure \ref{fig:fpga-demo}.
+
+NOTE: Testing in ModelSim was done before the datapath redesign and was tested with my own fibonacci logic which is similar to the given logic. The given logic was tested on the FPGA board and worked as expected.
+
 \subsection*{Conclusions}
 % Summarize in one paragraph, the work you did, the success and problems you encountered, and how to improve next in the future.
 % This section should only be 1 paragraph long.
