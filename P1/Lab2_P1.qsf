@@ -248,9 +248,7 @@ set_global_assignment -name VHDL_FILE fsm.vhd
 set_global_assignment -name VHDL_FILE reg.vhd
 set_global_assignment -name VHDL_FILE top_level.vhd
 set_global_assignment -name VHDL_FILE decode7seg.vhd
-set_global_assignment -name VHDL_FILE fib.vhd
 set_global_assignment -name VHDL_FILE datapath.vhd
-set_global_assignment -name VHDL_FILE fib_tb.vhd
 set_global_assignment -name VHDL_FILE mux.vhd
 set_global_assignment -name VHDL_FILE add.vhd
 set_global_assignment -name VHDL_FILE comparator.vhd
