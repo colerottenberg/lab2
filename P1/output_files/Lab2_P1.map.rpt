@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Lab2_P1
-Sun Feb 18 19:58:28 2024
+Mon Feb 19 01:52:50 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -9,9 +9,8 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |fib
-  5. Analysis & Elaboration Settings
-  6. Analysis & Elaboration Messages
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -38,10 +37,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                      ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sun Feb 18 19:58:28 2024          ;
+; Analysis & Elaboration Status      ; Failed - Mon Feb 19 01:52:50 2024              ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; Lab2_P1                                        ;
-; Top-level Entity Name              ; fib                                            ;
+; Top-level Entity Name              ; top_level                                      ;
 ; Family                             ; MAX 10                                         ;
 ; Total logic elements               ; N/A until Partition Merge                      ;
 ;     Total combinational functions  ; N/A until Partition Merge                      ;
@@ -73,23 +72,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |fib ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; width          ; 8     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; fib                ; Lab2_P1            ;
+; Top-level entity name                                            ; top_level          ; Lab2_P1            ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -175,26 +164,56 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Sun Feb 18 19:58:24 2024
+    Info: Processing started: Mon Feb 19 01:52:46 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2_P1 -c Lab2_P1 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
+    Info (12022): Found design unit 1: FSm-Id_S_5DcFF587_1295F637_E File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fsm.vhd Line: 9
+    Info (12023): Found entity 1: FSm File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fsm.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file reg.vhd
+    Info (12022): Found design unit 1: reg-rtl File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/reg.vhd Line: 18
+    Info (12023): Found entity 1: reg File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/reg.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
+    Info (12022): Found design unit 1: top_level-default File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd Line: 25
+    Info (12023): Found entity 1: top_level File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/top_level.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decode7seg.vhd
     Info (12022): Found design unit 1: decode7seg-rtl File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd Line: 11
     Info (12023): Found entity 1: decode7seg File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/decode7seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file fib.vhd
     Info (12022): Found design unit 1: fib-fib_arch File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd Line: 19
     Info (12023): Found entity 1: fib File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib.vhd Line: 7
-Info (12021): Found 1 design units, including 1 entities, in source file datapath.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: datapath-rtl File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 44
     Info (12023): Found entity 1: datapath File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file fib_tb.vhd
     Info (12022): Found design unit 1: fib_tb-tb File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd Line: 12
     Info (12023): Found entity 1: fib_tb File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/fib_tb.vhd Line: 9
-Info (12127): Elaborating entity "fib" for the top level hierarchy
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4804 megabytes
-    Info: Processing ended: Sun Feb 18 19:58:28 2024
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:05
+Warning (12090): Entity "mux" obtained from "mux.vhd" instead of from Quartus Prime megafunction library File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
+    Info (12022): Found design unit 1: mux-rtl File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 19
+    Info (12023): Found entity 1: mux File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file add.vhd
+    Info (12022): Found design unit 1: add-arch File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/add.vhd Line: 17
+    Info (12023): Found entity 1: add File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/add.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
+    Info (12022): Found design unit 1: comparator-behavioral File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd Line: 18
+    Info (12023): Found entity 1: comparator File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/comparator.vhd Line: 6
+Error (10465): VHDL error at datapath.vhd(52): name "i_mux" cannot be used because it is already used for a previously declared item File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 52
+Error (10349): VHDL Association List error at datapath.vhd(54): formal "width" does not exist File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 54
+Error (10349): VHDL Association List error at datapath.vhd(57): formal "input1" does not exist File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 57
+Error (10346): VHDL error at datapath.vhd(52): formal port or parameter "input1" must have actual or default value File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 52
+Error (10784): HDL error at mux.vhd(11): see declaration for object "input1" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 11
+Error (10346): VHDL error at datapath.vhd(52): formal port or parameter "input2" must have actual or default value File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 52
+Error (10784): HDL error at mux.vhd(12): see declaration for object "input2" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 12
+Error (10346): VHDL error at datapath.vhd(52): formal port or parameter "sel" must have actual or default value File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 52
+Error (10784): HDL error at mux.vhd(13): see declaration for object "sel" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 13
+Error (10346): VHDL error at datapath.vhd(52): formal port or parameter "output" must have actual or default value File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/datapath.vhd Line: 52
+Error (10784): HDL error at mux.vhd(14): see declaration for object "output" File: C:/Users/coler/Documents/uf/spring24/dd/lab2/P1/mux.vhd Line: 14
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 11 errors, 2 warnings
+    Error: Peak virtual memory: 4798 megabytes
+    Error: Processing ended: Mon Feb 19 01:52:50 2024
+    Error: Elapsed time: 00:00:04
+    Error: Total CPU time (on all processors): 00:00:04
 
 
